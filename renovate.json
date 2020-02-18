@@ -3,11 +3,17 @@
     "config:base"
   ],
   "automerge": true,
-  "commitMessage": "{{semanticPrefix}}Update {{depName}} to {{newVersion}} 🌟",
   "major": {
     "automerge": false
   },
   "minor": {
     "automerge": false
-  }
+  },
+  "prHourlyLimit": 2,
+  "updateNotScheduled": false,
+  "timezone": "America/New_York",
+  "schedule": [
+    "every weekend"
+  ],
+  "masterIssue": true
 }

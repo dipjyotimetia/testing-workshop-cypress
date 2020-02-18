@@ -11,10 +11,11 @@
     "start": "cd todomvc && npm start -- --quiet",
     "start:react": "http-server --silent -p 3000 -c-1 todomvc-react",
     "ci": "start-test 3000",
+    "dev": "start-test 3000 cy:open",
     "postinstall": "cd todomvc && npm install",
     "reset": "cd todomvc && npm run reset",
-    "format": "prettier-standard 'cypress/**/*.js'",
-    "lint": "standard 'cypress/**/*.js'"
+    "format": "eslint --fix 'cypress/**/*.js'",
+    "lint": "eslint 'cypress/**/*.js'"
   },
   "private": true,
   "repository": {
@@ -36,51 +37,40 @@
   },
   "homepage": "https://github.com/cypress-io/testing-workshop-cypress#readme",
   "devDependencies": {
-    "classnames": "2.2.6",
-    "@babel/plugin-proposal-do-expressions": "7.2.0",
-    "@cypress/browserify-preprocessor": "2.0.0",
-    "cypress": "3.2.0",
-    "cypress-dark": "1.7.0",
-    "cypress-failed-log": "2.5.0",
-    "cypress-pipe": "1.3.3",
-    "cypress-plugin-snapshots": "1.2.6",
-    "cypress-react-unit-test": "2.4.1",
-    "cypress-xpath": "1.3.0",
+    "@babel/plugin-proposal-do-expressions": "7.5.0",
+    "@cypress/browserify-preprocessor": "2.1.4",
+    "@cypress/code-coverage": "1.10.4",
+    "babel-plugin-istanbul": "5.2.0",
+    "cypress": "4.0.2",
+    "cypress-dark": "1.7.14",
+    "cypress-failed-log": "2.5.1",
+    "cypress-pipe": "1.5.0",
+    "cypress-plugin-snapshots": "1.2.9",
+    "cypress-react-unit-test": "2.4.3",
+    "cypress-xpath": "1.4.0",
     "debug": "4.1.1",
-    "http-server": "0.11.1",
-    "json-server": "0.14.0",
-    "json-server-reset": "1.0.0",
-    "mocha": "6.0.2",
-    "mocha-junit-reporter": "1.18.0",
+    "eslint": "6.7.2",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-plugin-cypress": "2.7.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "http-server": "0.12.0",
+    "istanbul-lib-coverage": "2.0.5",
+    "json-server": "0.15.1",
+    "json-server-reset": "1.3.0",
+    "mocha": "6.2.0",
+    "mocha-junit-reporter": "1.23.1",
     "mocha-multi-reporters": "1.1.7",
-    "mochawesome": "3.1.1",
-    "mochawesome-merge": "1.0.4",
-    "mochawesome-report-generator": "3.1.5",
-    "pluralize": "7.0.0",
-    "prettier": "1.16.4",
-    "prettier-standard": "9.1.1",
-    "standard": "12.0.1",
-    "start-server-and-test": "1.7.12",
+    "mochawesome": "4.1.0",
+    "mochawesome-merge": "1.0.7",
+    "mochawesome-report-generator": "4.0.1",
+    "nyc": "14.1.1",
+    "pluralize": "8.0.0",
+    "prettier": "1.18.2",
+    "start-server-and-test": "1.10.5",
     "tsify": "4.0.1",
-    "typescript": "3.4.1"
+    "typescript": "3.7.3"
   },
   "engines": {
-    "node": ">=6"
-  },
-  "standard": {
-    "ignore": [
-      "cypress/integration/13-app-actions/todo-page-object.js",
-      "cypress/integration/16-preprocessors/spec.js"
-    ],
-    "globals": [
-      "Cypress",
-      "cy",
-      "it",
-      "describe",
-      "context",
-      "beforeEach",
-      "assert",
-      "expect"
-    ]
+    "node": ">=8"
   }
 }

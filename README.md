@@ -5,7 +5,7 @@
 ## Requirements ⚙️
 
 - Any computer: Mac, Windows, Linux
-- [Node 6+](https://nodejs.org/)
+- [Node 8+](https://nodejs.org/)
 - [git](https://git-scm.com)
 
 In order to get the code and install dependencies
@@ -53,7 +53,7 @@ and you should see in the terminal
 
 Note for Windows users: if `npm start` throws an error, it is probably due to `cd todomvc; ...` first command in the `npm start `script. In this case change the working folder to "todomvc" and run `npm start` from there.
 
-From the second terminal window you should be able to open Cypress with
+From the second terminal window you should be able to open Cypress in the root of the project with
 
 ```bash
 $ npm run cy:open
@@ -62,13 +62,21 @@ $ npm run cy:open
 > cypress open
 ```
 
+### Tip
+
+You can use the installed [start-server-and-test](https://github.com/bahmutov/start-server-and-test) utility to start the app, open Cypress and then shutdown the app when you exit Cypress.
+
+```bash
+$ npm run dev
+```
+
 ## Application 💾
 
 [Vue.js](https://vuejs.org/) + [Vuex](https://vuex.vuejs.org/) + REST server application that we are going to test is in the folder `todomvc`. This application and its full testing is described in [this blog post](https://www.cypress.io/blog/2017/11/28/testing-vue-web-application-with-vuex-data-store-and-rest-backend/). The application should run fine without network access.
 
 ## Slides 🖥
 
-[https://gitpitch.com/cypress-io/testing-workshop-cypress][presentation] with the starting file in [PITCHME.md](PITCHME.md) presented using [GitPitch](https://gitpitch.com/). The pitch file includes files from the [slides](slides) folder. Students should open the [presentation slides][presentation] and follow along. You can also show each section separately by clicking on the "slides" link in the table below. The full presentation includes all these presentations.
+See the presentation at [https://gitpitch.com/cypress-io/testing-workshop-cypress][presentation] with the starting file in [PITCHME.md](PITCHME.md) presented using [GitPitch](https://gitpitch.com/). The pitch file includes files from the [slides](slides) folder. Students should open the [presentation slides][presentation] and follow along. You can also show each section separately by clicking on the "slides" link in the table below. The full presentation includes all these presentations.
 
 [presentation]: https://gitpitch.com/cypress-io/testing-workshop-cypress
 
@@ -106,6 +114,7 @@ $ npm run cy:open
 | [🔗](#preprocessors) | Preprocessors | [16-preprocessors](cypress/integration/16-preprocessors) | [16-preprocessors](slides/16-preprocessors/PITCHME.md) | [link](https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/16-preprocessors)
 | [🔗](#component-testing) | Component testing | [17-component-testing](cypress/integration/17-component-testing) | [17-component-testing](slides/17-component-testing/PITCHME.md) | [link](https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/17-component-testing)
 | [🔗](#backend) | Backend code | [18-backend](cypress/integration/18-backend) | [18-backend](slides/18-backend/PITCHME.md) | [link](https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/18-backend)
+| [🔗](#code-coverage) | Code coverage | [19-code-coverage](cypress/integration/19-code-coverage) | [19-code-coverage](slides/19-code-coverage/PITCHME.md) | [link](https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/19-code-coverage)
 | | The end                                | -                                                                                        | [end](slides/end/PITCHME.md)                                       | [link](https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/end)
 
 ## For speakers 🎙
